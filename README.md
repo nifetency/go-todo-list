@@ -1,55 +1,79 @@
-# Go Todo
+# Go Todo Application
 
-![hero](https://res.cloudinary.com/ichtrojan/image/upload/v1574958373/Screenshot_2019-11-28_at_17.22.25_gyegdr.png)
+## Overview
 
-## Introduction
+A simple to-do list application written in Go.
 
-A simple todolist application written in Go 
+This project demonstrates:
+- CRUD operations using Go
+- Database interaction using `database/sql`
+- Serving HTML templates
+
+It is useful for:
+- Learning Go backend development
+- Understanding database integration
+- Practicing full-stack basics
+
+---
 
 ## Requirements
-* MySQL installed
-* Go installed
+
+Make sure you have the following installed:
+
+- Go
+- MySQL
+- Git
+
+---
 
 ## Installation
 
-* Clone this repo 
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/ichtrojan/go-todo.git
-```
-
-* Change Directory
-
-```bash
 cd go-todo
 ```
 
-* Initiate `.env` file
+---
+
+### 2. Setup Environment File
 
 ```bash
 cp .env.example .env
 ```
 
-* Modify `.env` file with your correct database credentials and desired Port
+Update `.env` with your database credentials and desired port.
 
-## Usage
+---
 
-To run this application, execute:
+### 3. Run the Application
 
 ```bash
 go run main.go
 ```
 
-You should be able to access this application at `http://127.0.0.1:4040`
+---
 
->**NOTE**<br>
->If you modified the port in the `.env` file, you should access the application for the port you set
+### 4. Open in Browser
 
-## Conclusion 
+Visit:
 
-This Project is an example to teach CRUD using the default `database/sql` package and how to serve html templates properly.
+```
+http://127.0.0.1:4040
+```
 
-If you have anything to add to this, please send in a PR as it will no longer be actively maintained by [me](https://github.com/ichtrojan).
+Note: If you changed the port in `.env`, use that port instead.
+
+---
+
+## Features
+
+- Create, Read, Update, Delete (CRUD) operations
+- MySQL database integration
+- Server-side HTML rendering
+
+---
 
 ## Deployment on NIFE
 
@@ -59,7 +83,7 @@ https://launch.nife.io/
 
 Deployment flow:
 
-```
+```text
 Source → Build → Resources → Review → Deploy
 ```
 
@@ -81,22 +105,22 @@ docker push <username>/go-todo-list:latest
 
 ### Step 2: Configure Source
 
-* Source: Docker Image
-* Registry: Docker Hub
-* Image: `<username>/go-todo-list:latest`
-* Tag: `latest`
+- Source: Docker Image
+- Registry: Docker Hub
+- Image: `<username>/go-todo-list:latest`
+- Tag: `latest`
 
 ---
 
 ### Step 3: Build Configuration
 
-* Internal Port: `4040`
-* External Port: `80`
+- Internal Port: `4040`
+- External Port: `80`
 
 Environment variables:
 
 | Key     | Value              |
-| ------- | ------------------ |
+|---------|--------------------|
 | DB_HOST | your-database-host |
 | DB_USER | your-username      |
 | DB_PASS | your-password      |
@@ -107,26 +131,26 @@ Environment variables:
 
 ### Step 4: Resources Configuration
 
-* Region: e.g., `ap-south-1`
-* Resource Type: CPU
+- Region: e.g., `ap-south-1`
+- Resource Type: CPU
 
 Recommended settings:
 
-* CPU Request: `250m`
-* Memory Request: `512MB`
-* CPU Limit: `500m`
-* Memory Limit: `1GB`
+- CPU Request: `250m`
+- Memory Request: `512MB`
+- CPU Limit: `500m`
+- Memory Limit: `1GB`
 
 ---
 
 ### Step 5: Deploy
 
-* Strategy: Rolling
-* Workload: Deployment
-* Routing Policy: Latency
-* Replicas: 1–2
+- Strategy: Rolling
+- Workload: Deployment
+- Routing Policy: Latency
+- Replicas: 1–2
 
-Click Deploy.
+Click **Deploy**.
 
 ---
 
@@ -134,16 +158,16 @@ Click Deploy.
 
 ### Step 1: Select Source
 
-* Source: Git Repository
-* Provider: GitHub
-* Branch: `main`
+- Source: Git Repository
+- Provider: GitHub
+- Branch: `main`
 
 ---
 
 ### Step 2: Build Configuration
 
-* Internal Port: `4040`
-* External Port: `80`
+- Internal Port: `4040`
+- External Port: `80`
 
 Enable:
 
@@ -157,10 +181,10 @@ Auto-Dockerize with Runtime
 
 NIFE automatically performs:
 
-* SAST
-* SCA
-* Container scan
-* IaC scan
+- SAST
+- SCA
+- Container scan
+- IaC scan
 
 Resolve any critical issues before proceeding.
 
@@ -174,27 +198,21 @@ Use the recommended configuration above and deploy.
 
 ## Deployment using nifectl (CLI)
 
-You can deploy the application using the nifectl CLI.
-
----
-
-### Install nifectl CLI (Windows)
-
-#### Step 1: Download nifectl
+### Step 1: Download nifectl
 
 https://docs.nife.io/Quick-Start/Nifectl
 
 ---
 
-#### Step 2: Open Terminal
+### Step 2: Open Terminal
 
-* Type `cmd` in the address bar
-  or
-* Right-click and select **Open in Terminal**
+- Type `cmd` in the address bar  
+  OR  
+- Right-click → **Open in Terminal**
 
 ---
 
-#### Step 3: Verify Installation
+### Step 3: Verify Installation
 
 ```bash
 nifectl --help
@@ -202,7 +220,7 @@ nifectl --help
 
 ---
 
-### Deployment Steps
+## Deployment Steps
 
 ### Step 1: Login
 
@@ -219,24 +237,22 @@ nifectl init
 ```
 
 Provide:
-
-* Application name
-* Organization
-* Repository URL
-* Branch (`main`)
+- Application name
+- Organization
+- Repository URL
+- Branch (`main`)
 
 ---
 
 ### Step 3: Configure Deployment
 
-* Deployment Type: Deployment
-* Resource Type: CPU
-* Replicas: 1
+- Deployment Type: Deployment
+- Resource Type: CPU
+- Replicas: 1
 
 Ports:
-
-* Internal: `4040`
-* External: `80`
+- Internal: `4040`
+- External: `80`
 
 ---
 
@@ -261,10 +277,9 @@ IND - Mumbai
 ### Step 6: Monitor Deployment
 
 Monitor logs for:
-
-* Validation
-* Build
-* Deployment
+- Validation
+- Build
+- Deployment
 
 ---
 
@@ -276,11 +291,10 @@ https://<your-nife-url>
 
 ---
 
-
 ## Dependencies
 
 | Dependency     | Purpose              |
-| -------------- | -------------------- |
+|----------------|----------------------|
 | Go             | Runtime environment  |
 | MySQL          | Database             |
 | database/sql   | Database interaction |
@@ -291,7 +305,7 @@ https://<your-nife-url>
 ## Environment Variables
 
 | Variable | Description       | Example   |
-| -------- | ----------------- | --------- |
+|----------|------------------|-----------|
 | DB_HOST  | Database host     | localhost |
 | DB_USER  | Database username | root      |
 | DB_PASS  | Database password | password  |
@@ -302,16 +316,35 @@ https://<your-nife-url>
 
 ## Troubleshooting
 
-| Issue                    | Solution                                          |
-| ------------------------ | ------------------------------------------------- |
-| Port already in use      | Change PORT in `.env` or stop the running process |
-| MySQL connection failed  | Verify DB credentials and ensure MySQL is running |
-| App not starting         | Check `.env` configuration and logs               |
-| Go not installed         | Install Go and verify with `go version`           |
-| Dependencies missing     | Run `go mod tidy`                                 |
-| Docker build fails       | Ensure Dockerfile is correct                      |
-| Deployment fails on NIFE | Verify ports, env variables, and logs             |
-| App not accessible       | Check routing and port configuration              |
-| Database not reachable   | Ensure DB is accessible from deployment           |
+| Issue                   | Solution                                          |
+|------------------------|--------------------------------------------------|
+| Port already in use    | Change PORT or stop running process              |
+| MySQL connection failed| Verify DB credentials and MySQL service          |
+| App not starting       | Check `.env` configuration and logs              |
+| Go not installed       | Install Go and verify with `go version`          |
+| Dependencies missing   | Run `go mod tidy`                                |
+| Docker build fails     | Verify Dockerfile                                |
+| Deployment fails       | Check logs, ports, and environment variables     |
+| App not accessible     | Verify routing and port mapping                  |
+| DB not reachable       | Ensure database is accessible                    |
 
 ---
+
+## Acknowledgements
+
+This repository is maintained by Nifetency as a sample deployment project for Nife.io.
+
+If derived from an upstream example, proper credit should be given to the original author.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## References
+
+- Original Repository: https://github.com/ichtrojan/go-todo
+- NIFE Platform: https://nife.io/

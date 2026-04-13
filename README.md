@@ -205,7 +205,7 @@ This project is licensed under the MIT License.
 
 ## References
 
-[1]: https://nife.io "Nife.io"
-[2]: https://docs.nife.io/overview/quick-deploy "Nife.io Quick Deploy"
-[3]: https://github.com/ichtrojan/go-todo "ichtrojan/go-todo"
-[4]: https://docs.nife.io/Quick-Start/Nifectl "Nifectl Quick Start"
+1. [Nife.io](https://nife.io)  
+2. [Nife Docs Overview](https://docs.nife.io/overview/)  
+3. [Original Repository](https://github.com/nifetency/go-todo-list)
+4. [Nife Quick Start](https://docs.nife.io/Quick-Start)

@@ -147,6 +147,13 @@ nifectl deploy
 ```
 
 For step-by-step instructions, see the [Nife.io Quick Deploy documentation][2] and the [nifectl quick start guide][4].
+## Option 4: Deploy on NIFE OneClick
+
+Launch your own instance of **go-todo-list** with a single click.
+
+### Deploy as Application
+
+[![Deploy App on OneClick](https://img.shields.io/badge/🚀%20Deploy%20App%20on%20OneClick-6C2CF5?style=for-the-badge)](https://launch.nife.io/deploy-app/start?repository-url=https://github.com/nifetency/go-todo-list)
 
 ---
 

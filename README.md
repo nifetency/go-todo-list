@@ -2,7 +2,7 @@
 
 <h3 align="center"><b><u>Deploy this project Instantly</u></b></h3>
 
-<a href="https://launch.nife.io/deploy-app/start?repository-url=https://github.com/nifetency/go-todo-list.git">
+<a href="https://launch.nife.io/deploy-app/start?repository-url=https://github.com/nife-public/go-todo-list.git">
   <img
     src="https://launch.nife.io/deploy-on-nife.svg"
     alt="Deploy on NIFE"
